@@ -1,0 +1,98 @@
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    button {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+
+/* ========== Transition  ============ */
+    .transition button {
+        padding: 20px 40px;
+        background-color: red;
+        transition: all 2s linear 1s;
+        border: none;
+        border-radius: 15px;
+    }
+    .transition button:hover {
+        background-color: green;
+        color: white;
+    }
+
+
+/* ========== Transform  ============ */
+    .transform button {
+        padding: 20px 40px;
+        border: none;
+        background-color: blue;
+        transition: transform 2s linear;
+        border-radius: 15px;
+    }
+    .transform button:hover {
+        transform: translate(50%);
+    }
+
+
+/*========== Animation  ============ */
+    .animation button {
+        width: 100px;
+        height: 100px;
+        border: none;
+        font-weight: bold;
+        border-radius: 50px;
+        background-color: green;
+        position: relative;
+
+        animation-name: animate;
+        animation-duration: 3s;
+        animation-fill-mode: forward;
+        animation-direction: reverse;
+        animation-iteration-count: 2;
+        transition: all .5s linear;
+    }
+
+    @keyframes animate {
+        0% {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        100% {
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+
+        0% {
+            background-color: red;
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            background-color: yellow;
+            left: 200px;
+            top: 0px;
+        }
+
+        50% {
+            background-color: blue;
+            left: 200px;
+            top: 200px;
+        }
+
+        75% {
+            background-color: green;
+            left: 0px;
+            top: 200px;
+        }
+
+        100% {
+            background-color: red;
+            left: 0px;
+            top: 0px;
+        }
+    }
